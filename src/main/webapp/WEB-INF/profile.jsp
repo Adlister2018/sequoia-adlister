@@ -15,7 +15,7 @@
         <h1 ><a href="/ads/create"> Create an Ad </a></h1>
     </div>
     <div class="container">
-        <h1><a href="ads/indexUser">My Ads</a></h1>
+        <h1><a href="/ads/profileAds">My Ads</a></h1>
     </div>
 
 </body>
