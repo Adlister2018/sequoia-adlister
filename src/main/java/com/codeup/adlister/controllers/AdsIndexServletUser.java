@@ -12,7 +12,7 @@ import java.io.IOException;
 @WebServlet(name = "controllers.AdsIndexServletUser", urlPatterns = "/ads/profileAds")
 public class AdsIndexServletUser extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("adsUser",DaoFactory.getAdsDao().all());
+        request.setAttribute("adsUser",DaoFactory.getUsersDao());
 
 
 
