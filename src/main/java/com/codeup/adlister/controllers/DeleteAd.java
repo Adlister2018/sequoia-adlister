@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "controllers.AdsIndexServletUser", urlPatterns = "/ads/profileAds")
-public class AdsIndexServletUser extends HttpServlet {
+@WebServlet(name = "controllers.AdsIndexServletUser", urlPatterns = "/ads/delete")
+public class DeleteAd extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
@@ -32,15 +32,11 @@ public class AdsIndexServletUser extends HttpServlet {
             user = (User) request.getSession().getAttribute("user");
         }
 
-        List<Ad> userAds = DaoFactory.getAdsDao().userAds(user.getId());
+//        List<Ad> userAds = DaoFactory.getAdsDao().e      .getAdsDao().extractAd(user.getId());
 
-        for(Ad ad : userAds) {
-            System.out.println("---");
-            System.out.println("  id#" + ad.getId());
-            System.out.println("  title: " + ad.getTitle());
-        }
 
-        request.setAttribute("userAds", userAds);
+
+//        request.setAttribute("userAds", userAds);
 
         request.getRequestDispatcher("/WEB-INF/ads/profileAds.jsp").forward(request, response);
     }
