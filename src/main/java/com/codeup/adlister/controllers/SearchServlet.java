@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name="controllers.SearchServlet", urlPatterns ="/" )
+@WebServlet(name="controllers.SearchServlet", urlPatterns ="/search" )
 
 public class SearchServlet extends HttpServlet{
 
