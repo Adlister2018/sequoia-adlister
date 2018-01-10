@@ -15,29 +15,10 @@ import java.util.List;
 @WebServlet(name = "controllers.AdsIndexServletUser", urlPatterns = "/ads/delete")
 public class DeleteAd extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("user") == null) {
-            response.sendRedirect("/login");
-            return;
-        }
 
-        User user;
+    }
 
-        if (request.getParameter("id") != null) {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-            Long id = Long.parseLong(request.getParameter("id"));
-            user = DaoFactory.getUsersDao().findById(id);
-
-        } else {
-
-            user = (User) request.getSession().getAttribute("user");
-        }
-
-//        List<Ad> userAds = DaoFactory.getAdsDao().e      .getAdsDao().extractAd(user.getId());
-
-
-
-//        request.setAttribute("userAds", userAds);
-
-        request.getRequestDispatcher("/WEB-INF/ads/profileAds.jsp").forward(request, response);
     }
 }
