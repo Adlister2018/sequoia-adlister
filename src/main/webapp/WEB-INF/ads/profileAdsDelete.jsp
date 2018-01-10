@@ -13,21 +13,22 @@
 
     <form action="/ads/delete" method="post">
 
+
             <c:forEach var="ad" items="${userAds}">
 
-
             <div class="col-md-6">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <input type="hidden" name="id" value="${ad.id}"
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" name="deleteAd">
+                        <input type="hidden" name="id" value="${ad.id}">
                     <div class="custom-control custom-checkbox">
                         <label class="custom-control-label" for="customCheck1"><h2>${ad.title}</h2></label>
                         <p>${ad.description}</p>
+                        <button type="submit" class="btn btn-primary">Delete</button>
                     </div>
             </div>
             </c:forEach>
-                        <button type="submit" class="btn btn-primary">Submit</button>
 
         </form>
+    <form
 
 
     <%--</div>--%>

@@ -33,6 +33,8 @@ public class AdsIndexServletUser extends HttpServlet {
             user = (User) request.getSession().getAttribute("user");
         }
 
+
+
         List<Ad> userAds = DaoFactory.getAdsDao().userAds(user.getId());
 
         for(Ad ad : userAds) {
