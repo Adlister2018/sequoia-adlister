@@ -12,10 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-//@WebServlet(name = "controllers.AdsIndexServletUser", urlPatterns = "/ads/profileAds")
-@WebServlet(name = "controllers.AdsIndexServletUser", urlPatterns = "/ads/profileAds")
-public class AdsIndexServletUser extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+@WebServlet(name = "controllers.ProfileAdsServlet", urlPatterns = "/ads/profileAds")
+public class ProfileAdsServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+        System.out.println("[ProfileAdsServlet#doGet] Start of method!");
+
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;

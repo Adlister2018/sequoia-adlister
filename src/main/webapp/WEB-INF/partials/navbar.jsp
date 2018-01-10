@@ -18,14 +18,15 @@
                 </c:when>
                 <c:when test="${sessionScope.user != null}">
                         <li><a href="/ads/profileAds?id=${sessionScope.user.id}">My Ads</a></li>
-                        <li><a href=" ">Search</a></li>
+                        <li><a href="/search ">Search</a></li>
                         <li><a href="/ads/create">Create</a></li>
-                        <li><a href=" ">Edit</a></li>
-                        <li><a href=" ">Delete</a> </li>
+                        <li><a href="/ads/edit">Edit</a></li>
+                        <li><a href="/ads/delete">Delete</a> </li>
                         <li><a href="/logout">Logout</a></li>
 
                     <%--<li><a href="/adsUser">My Ads</a></li>--%>
                 </c:when>
+
 
             </c:choose>
 
