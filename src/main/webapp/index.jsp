@@ -10,12 +10,19 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <%--<h1 class="intro--header">Welcome to the Adlister!</h1>--%>
-        <div class="hero-img">
-
-        </div>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Welcome to Adlister!</h1>
+                    <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
+                    <%--<a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>--%>
+                </div>
+            </div>
         <div class="container marketing">
             <!-- Three columns of text below the carousel -->
             <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Most Recent Ads</h1>
+                </div>
                 <div class="col-lg-4">
                     <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
                     <h2>Heading</h2>
