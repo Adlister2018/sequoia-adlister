@@ -63,8 +63,8 @@ public class MySQLAdsDao implements Ads {
             delStmt = connection.prepareStatement("DELETE * FROM ads WHERE id=?");
             delStmt.setLong(1, id);
             delStmt.executeUpdate();
-            ResultSet rs = delStmt.executeUpdate();
-            return createAdsFromResults(rs);
+//            ResultSet rs = delStmt.executeUpdate();
+//            return createAdsFromResults(rs);
 
         }
         catch (SQLException e){
@@ -91,6 +91,20 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+   public  List<Ad> search(String searchTerm) {
+
+        PreparedStatement userstmt = null;
+        try {
+            userstmt = connection.prepareStatement("SELECT * FROM ads a WHERE title LIKE ? ");
+            userstmt.setString(1, "%" + searchTerm + "%");
+            ResultSet rs = userstmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+
+    }
+
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(

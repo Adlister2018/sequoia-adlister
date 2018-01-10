@@ -13,4 +13,6 @@ public interface Ads {
     List<Ad> userAds(Long userId);
 
     void deleteAd(Long id);
+
+    List<Ad> search(String searchTerm);
 }
