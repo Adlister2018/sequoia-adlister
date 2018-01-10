@@ -29,3 +29,8 @@ h1, h2, h3 {
 .btn-width {
     width: 15% !important;
 }
+
+/* helper */
+.center {
+    margin: 0 auto;
+}
