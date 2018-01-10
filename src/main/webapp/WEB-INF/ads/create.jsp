@@ -8,23 +8,20 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-        <h1>Create a new Ad ${sessionScope.user.username}</h1>
-           <div class="container">
+    <div class="container form-styles center">
+        <h1 class="text-center">Create a new Ad,<br> ${sessionScope.user.username}!</h1>
+        <form action="/ads/create" method="post">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input id="title" name="title" class="form-control" type="text">
+            </div>
 
-                <form action="/ads/create" method="post">
-                    <div class="form-group">
-                            <label for="title">Title</label>
-                            <input id="title" name="title" class="form-control" type="text">
-                    </div>
-
-                    <div class="form-group">
-                            <label for="description">Description</label>
-                            <textarea id="description" name="description" class="form-control" type="text"></textarea>
-                    </div>
-
-                    <input type="submit" class="btn btn-block btn-primary">
-
-                </form>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" class="form-control" type="text"></textarea>
+            </div>
+            <input type="submit" class="btn btn-block btn-primary btn-width">
+        </form>
     </div>
 
 </body>

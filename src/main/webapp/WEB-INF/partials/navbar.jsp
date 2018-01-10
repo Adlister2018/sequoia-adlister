@@ -17,18 +17,23 @@
                         <li><a href="/ads">All Ads</a></li>
                 </c:when>
                 <c:when test="${sessionScope.user != null}">
+                    <form class="navbar-form navbar-right" action="/search">
+                        <input type="text" name="term" class="form-control" placeholder="Search...">
+                    </form>
+
                         <li><a href="/ads/profileAds?id=${sessionScope.user.id}">My Ads</a></li>
+
                         <li><a href="/ads">All Ads</a></li>
                         <li><a href="/search ">Search</a></li>
+
+
                         <li><a href="/ads/create">Create</a></li>
                         <li><a href="/logout">Logout</a></li>
 
                     <%--<li><a href="/adsUser">My Ads</a></li>--%>
                 </c:when>
 
-
             </c:choose>
-
         </ul>
 
 

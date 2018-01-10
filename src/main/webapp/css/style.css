@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display');
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container-fluid {
+    width: 50%;
+}
+
+
+.hero-img {
+    background: url(/image/landing-hero.jpg) no-repeat center center fixed;
+}
+
+
+.intro--header {
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+.form-styles {
+    width: 35%;
+}
+
+.btn-width {
+    width: 15% !important;
+}
+
+/* helper */
+.center {
+    margin: 0 auto;
+}

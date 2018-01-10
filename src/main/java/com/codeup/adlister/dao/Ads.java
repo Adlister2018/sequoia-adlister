@@ -17,4 +17,7 @@ public interface Ads {
     Ad findById(Long id);
 
     void update(Ad ad);
+
+    List<Ad> search(String searchTerm);
+
 }
