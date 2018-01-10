@@ -35,8 +35,6 @@
                 </div>
             </div>
         </div>
-        <h2><a href="/ads/create"> Create an Ad</a></h2>
-        <h2><a href="/ads/profileAds">My Ads</a></h2>
     </div>
 
         <%--<h1>Welcome, ${sessionScope.user.username}!</h1>--%>

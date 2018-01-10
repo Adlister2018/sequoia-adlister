@@ -63,8 +63,8 @@ public class MySQLAdsDao implements Ads {
             delStmt = connection.prepareStatement("DELETE * FROM ads WHERE id=?");
             delStmt.setLong(1, id);
             delStmt.executeUpdate();
-            ResultSet rs = delStmt.executeUpdate();
-            return createAdsFromResults(rs);
+//            ResultSet rs = delStmt.executeUpdate();
+//            return createAdsFromResults(rs);
 
         }
         catch (SQLException e){
