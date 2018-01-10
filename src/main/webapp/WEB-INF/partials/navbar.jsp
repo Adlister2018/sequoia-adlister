@@ -14,7 +14,7 @@
                         <li><a href="/login">Login</a></li>
                         <%--<li><a href="/logout">Logout</a></li>--%>
                         <li><a href="/register">Register</a></li>
-                        <%--<li><a href="/ads">All Ads</a></li>--%>
+                        <li><a href="/ads">All Ads</a></li>
                 </c:when>
                 <c:when test="${sessionScope.user != null}">
                     <form class="navbar-form navbar-right" action="/search">
@@ -22,9 +22,12 @@
                     </form>
 
                         <li><a href="/ads/profileAds?id=${sessionScope.user.id}">My Ads</a></li>
+
+                        <li><a href="/ads">All Ads</a></li>
+                        <li><a href="/search ">Search</a></li>
+
+
                         <li><a href="/ads/create">Create</a></li>
-                        <li><a href="/ads/edit">Edit</a></li>
-                        <li><a href="/ads/delete">Delete</a> </li>
                         <li><a href="/logout">Logout</a></li>
 
                     <%--<li><a href="/adsUser">My Ads</a></li>--%>
