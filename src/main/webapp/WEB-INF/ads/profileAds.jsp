@@ -18,7 +18,6 @@
             <form method="post" action="/ads/delete?id=${ad.id}">
                 <button type="submit" class="btn btn-primary">delete</button>
             </form>
-
         </div>
     </c:forEach>
 .
