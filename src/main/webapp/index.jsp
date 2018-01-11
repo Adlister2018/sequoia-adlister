@@ -8,20 +8,30 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container">
-        <%--<h1 class="intro--header">Welcome to the Adlister!</h1>--%>
-            <div class="container">
-                <div class="jumbotron">
-                    <h1>Welcome to Adlister!</h1>
-                    <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
-                    <%--<a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>--%>
+    <h1 class="hero-maintext">Welcome to Adlister</h1>
+    <p class="hero-maintext hero-subtext">Start searching for ads right now</p>
+    <form class="navbar-form hero-maintext hero-subtext hero-form" action="/search">
+        <input type="text" name="term" class="form-control" placeholder="Search...">
+    </form>
+
+    <div class="jumbotron img-wrapper">
+         <div class="video-container landing-img">
+                <video autoplay loop class="fillWidth">
+                    <source src="image/Cinema_Paradiso/Cinema_Paradiso.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src="image/Cinema_Paradiso/Cinema_Paradiso.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                </video>
+                <div class="poster hidden">
+                    <img src="image/Cinema_Paradiso/Cinema_Paradiso.jpg" alt="">
                 </div>
             </div>
+    </div>
+    <div class="container">
         <div class="container marketing">
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Most Recent Ads</h1>
+                    <p>Discover more Ads by clicking on all ads</p>
                 </div>
                 <div class="col-lg-4">
                     <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
@@ -69,5 +79,7 @@
 
         </div>
     </div><!-- /.container -->
+    <script type="text/javascript" src="js/adlister.js"></script>
+
 </body>
 </html>
