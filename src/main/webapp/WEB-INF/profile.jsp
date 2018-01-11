@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -8,43 +9,73 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
+    <%--The container starts--%>
+
     <div class="container">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main center">
-            <h1 class="page-header">Welcome, ${sessionScope.user.username}!</h1>
 
-            <div class="row placeholders">
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
+<%-- The head shot of the Profile--%>
+
+       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main center">
+        <h1 class="page-header">Welcome, ${sessionScope.user.username}!</h1>
+        <%--the banner and face pic--%>
+            <div class="card hovercard">
+                <div class="card-background">
+                <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
+                <!-- http://lorempixel.com/850/280/people/9/ -->
             </div>
-        </div>
+                <div class="useravatar">
+                <img alt="" src="http://lorempixel.com/100/100/people/9/">
+                </div>
+
+            </div>
+<%------------------------------%>
+
+
+           <div class="well">
+<%------------------Social Media tabs--%>
+               <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+                   <div class="btn-group" role="group">
+                       <button type="button" id="stars" class="btn btn-primary" href="https://www.facebook.com/TheEntWorld/" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                           <div class="hidden-xs">Facebook</div>
+                       </button>
+                   </div>
+                   <div class="btn-group" role="group">
+                       <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                           <div class="hidden-xs">Instagram</div>
+                       </button>
+                   </div>
+                   <div class="btn-group" role="group">
+                       <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                           <div class="hidden-xs">Twitter</div>
+                       </button>
+                   </div>
+               </div>
+<%------------------Social Media ends--%>
+<%--The Ads section--%>
+               <h3>My Ads</h3>
+                    <div class="row">
+                        <c:forEach var="ad" items="${ads}">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img src="..." alt="...">
+                                    <div class="caption">
+                                            <%--The information from the Dao--%>
+                                        <h4>${ad.title}</h4>
+                                        <p>${ad.description}</p>
+                                        <p><a href="/ads/edit?id=${ad.id}" class="btn btn-primary" role="button">Edit</a>
+                                            <form method="post" action="/ads/delete?id=${ad.id}">
+                                            <button type="submit" class="btn btn-primary">delete</button>
+                                            </form>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                       </c:forEach>
+                    </div>
+<%-- The ad section ends--%>
+           </div>
+       </div>
     </div>
-
-        <%--<h1>Welcome, ${sessionScope.user.username}!</h1>--%>
-
-    <%--<div class="container">--%>
-        <%--&lt;%&ndash;<h1 ><a href="/ads/create"> Create an Ad </a></h1>&ndash;%&gt;--%>
-    <%--</div>--%>
-    <%--<div class="container">--%>
-        <%--<h1><a href="/ads/profileAds?id=${sessionScope.user.id}">My Ads</a></h1>--%>
-    <%--</div>--%>
-
 </body>
+
 </html>

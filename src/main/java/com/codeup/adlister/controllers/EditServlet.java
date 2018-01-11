@@ -63,7 +63,7 @@ public class EditServlet extends HttpServlet {
         // update the ad in the database using the dao
 
         DaoFactory.getAdsDao().update(ad);
-        response.sendRedirect("/ads");
+        response.sendRedirect("/profile");
 
 }
 

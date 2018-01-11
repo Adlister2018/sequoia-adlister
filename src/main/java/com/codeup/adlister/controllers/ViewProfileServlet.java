@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "controllers.ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
@@ -20,8 +22,18 @@ public class ViewProfileServlet extends HttpServlet {
 
 
         User user = (User) request.getSession().getAttribute("user");
-        request.setAttribute("ads", DaoFactory.getAdsDao().userAds(user.getId())
-        );
+
+        List<Ad> ads = DaoFactory.getAdsDao().userAds(user.getId());
+
+        System.out.println("We have this many ads: --> " + ads.size());
+
+        for(Ad ad : ads) {
+            System.out.println("---");
+            System.out.println("  id#" + ad.getId() + " title: " + ad.getTitle());
+        }
+
+
+        request.setAttribute("ads", ads);
 
 
 
