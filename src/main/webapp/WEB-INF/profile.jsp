@@ -15,7 +15,7 @@
 
 <%-- The head shot of the Profile--%>
 
-       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main center">
+       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main center profile--top">
         <h1 class="page-header">Welcome, ${sessionScope.user.username}!</h1>
         <%--the banner and face pic--%>
             <div class="card hovercard">
