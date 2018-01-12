@@ -7,11 +7,14 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container form-styles">
+    <div class="container form-styles ">
         <h1>Please Log In</h1>
         <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
+
+
+                <%--id is for JS name is for Java--%>
                 <input id="username" name="username" class="form-control" type="text">
             </div>
             <div class="form-group">

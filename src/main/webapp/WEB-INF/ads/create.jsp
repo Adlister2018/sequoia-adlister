@@ -8,7 +8,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-    <div class="container form-styles center">
+    <div class="container form-styles center top-of-page-space">
         <h1 class="text-center">Create a new Ad,<br> ${sessionScope.user.username}!</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
