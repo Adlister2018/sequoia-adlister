@@ -2,6 +2,11 @@ package com.codeup.adlister.models;
 
 import com.codeup.adlister.util.Password;
 
+//Receipe
+
+//this is the first step ans its your object
+
+
 public class User {
     private long id;
     private String username;
@@ -9,6 +14,8 @@ public class User {
     private String password;
 
     public User() {}
+
+//    when you want to build instances of the class
 
     public User(String username, String email, String password) {
         this.username = username;
