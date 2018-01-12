@@ -40,12 +40,12 @@
                        </button>
                    </div>
                    <div class="btn-group" role="group">
-                       <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                       <button type="button" id="favorites" class="btn btn-default" href="https://www.instagram.com/theentrepreneurialworld/" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
                            <div class="hidden-xs">Instagram</div>
                        </button>
                    </div>
                    <div class="btn-group" role="group">
-                       <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                       <button type="button" id="following" class="btn btn-default" href="https://twitter.com/TheEntWorld" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                            <div class="hidden-xs">Twitter</div>
                        </button>
                    </div>
