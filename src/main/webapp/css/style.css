@@ -10,6 +10,10 @@ h1, h2, h3 {
 .nav-color {
     background-color: #fff;
 }
+.nav-align {
+    position: relative;
+    top: 7.5px !important;
+}
 .container {
     width: 100%;
 }
@@ -34,6 +38,11 @@ h1, h2, h3 {
 .hero-form {
     left: 730px;
     top: 350px;
+}
+
+.profile--top {
+    position: relative;
+    top: 70px;
 }
 
 .jumbotron {
@@ -62,6 +71,8 @@ h1, h2, h3 {
 
 .form-styles {
     width: 35%;
+    position: relative;
+    top: 70px;
 }
 
 .btn-width {

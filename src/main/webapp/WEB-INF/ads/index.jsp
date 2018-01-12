@@ -16,7 +16,7 @@
             <div class="container">
                 <div>Welcome to Adlister</h1>
                     <p >Start searching for ads right now</p>
-                    <form action="/search">
+                    <form class="navbar-form navbar-left" action="/search">
                         <input type="text" name="term" class="form-control" placeholder="Search...">
                     </form>
                 </div>
