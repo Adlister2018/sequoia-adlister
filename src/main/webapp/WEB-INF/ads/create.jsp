@@ -8,7 +8,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-    <div class="container form-styles center">
+    <div class="container form-styles center top-of-page-space">
         <h1 class="text-center">Create a new Ad,<br> ${sessionScope.user.username}!</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
@@ -21,11 +21,11 @@
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
 <%--selection of the categories--%>
-            <div class="form-select-button">
-                <%--<label for="categories">Categories</label>--%>
-                <input id="categoryTech" type="checkbox" name="categoryTech" value="Tech" checked="checked">Tech<br>
-                <input id="categoryClothes" type="checkbox" name="categoryClothes" value="Clothes" >Clothes<br>
-            </div>
+            <%--<div class="form-select-button">--%>
+                <%--&lt;%&ndash;<label for="categories">Categories</label>&ndash;%&gt;--%>
+                <%--<input id="categoryTech" type="checkbox" name="categoryTech" value="Tech" checked="checked">Tech<br>--%>
+                <%--<input id="categoryClothes" type="checkbox" name="categoryClothes" value="Clothes" >Clothes<br>--%>
+            <%--</div>--%>
 <%--selection of the categories--%>
             <input type="submit" class="btn btn-block btn-primary btn-width">
         </form>

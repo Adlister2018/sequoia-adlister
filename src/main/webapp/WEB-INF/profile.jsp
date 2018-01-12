@@ -57,7 +57,7 @@
                         <c:forEach var="ad" items="${ads}">
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="..." alt="...">
+                                    <%--<img src="..." alt="...">--%>
                                     <div class="caption">
                                             <%--The information from the Dao--%>
                                         <h4>${ad.title}</h4>

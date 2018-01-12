@@ -29,7 +29,7 @@
                 <c:forEach var="ad" items="${ads}">
                     <div class="col-lg-4">
                         <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <%--<img class="card-img-top" src="..." alt="Card image cap">--%>
                         <div class="card-body">
                         <h5 class="card-title">${ad.title}</h5>
                         <p class="card-text">${ad.description}.</p>
