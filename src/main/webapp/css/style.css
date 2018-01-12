@@ -10,6 +10,10 @@ h1, h2, h3 {
 .nav-color {
     background-color: #fff;
 }
+.nav-align {
+    position: relative;
+    top: 6px !important;
+}
 .container {
     width: 100%;
 }

@@ -14,7 +14,7 @@
                     <li>
                         <button class="btn btn-link" data-toggle="modal" data-target="#myModal">Login</button>
                     </li>
-                    <li>
+                    <li class="nav-align">
                         <button class="btn btn-link" data-toggle="modal" data-target="#myModalRegister">Register</button>
                     </li>
                     <li><a href="/ads">All Ads</a></li>
