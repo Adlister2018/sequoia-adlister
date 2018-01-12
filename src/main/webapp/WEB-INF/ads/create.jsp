@@ -20,6 +20,13 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+<%--selection of the categories--%>
+            <div class="form-select-button">
+                <%--<label for="categories">Categories</label>--%>
+                <input id="categoryTech" type="checkbox" name="categoryTech" value="Tech" checked="checked">Tech<br>
+                <input id="categoryClothes" type="checkbox" name="categoryClothes" value="Clothes" >Clothes<br>
+            </div>
+<%--selection of the categories--%>
             <input type="submit" class="btn btn-block btn-primary btn-width">
         </form>
     </div>

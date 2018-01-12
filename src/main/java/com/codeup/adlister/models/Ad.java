@@ -1,18 +1,22 @@
 package com.codeup.adlister.models;
 
+//this is the first step ans its your object
+
 public class Ad {
     private long id;
     private long userId;
     private String title;
     private String description;
 
+
+// to get all the information
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
     }
-
+//constructor to create a New Ad|| Cause we dont know the Id
     public Ad(long userId, String title, String description) {
         this.userId = userId;
         this.title = title;
