@@ -11,24 +11,27 @@
         <ul class="nav navbar-nav navbar-right">
             <c:choose>
                 <c:when test="${sessionScope.user == null}">
-                        <li><a href="/login">Login</a></li>
-                        <%--<li><a href="/logout">Logout</a></li>--%>
-                        <li><a href="/register">Register</a></li>
-                        <li><a href="/ads">All Ads</a></li>
+                    <li class="nav-align">
+                        <button class="btn btn-link" data-toggle="modal" data-target="#myModal">Login</button>
+                    </li>
+                    <li class="nav-align">
+                        <button class="btn btn-link" data-toggle="modal" data-target="#myModalRegister">Register</button>
+                    </li>
+                    <li><a href="/ads">All Ads</a></li>
                 </c:when>
                 <c:when test="${sessionScope.user != null}">
                     <form class="navbar-form navbar-right" action="/search">
                         <input type="text" name="term" class="form-control" placeholder="Search...">
                     </form>
 
-                        <li><a href="/profile?id=${sessionScope.user.id}">My Profile/Ads</a></li>
+                    <li><a href="/profile?id=${sessionScope.user.id}">My Profile/Ads</a></li>
 
-                        <li><a href="/ads">All Ads</a></li>
-                        <%--<li><a href="/search ">Search</a></li>--%>
+                    <li><a href="/ads">All Ads</a></li>
+                    <%--<li><a href="/search ">Search</a></li>--%>
 
 
-                        <li><a href="/ads/create">Create</a></li>
-                        <li><a href="/logout">Logout</a></li>
+                    <li><a href="/ads/create">Create</a></li>
+                    <li><a href="/logout">Logout</a></li>
 
                     <%--<li><a href="/adsUser">My Ads</a></li>--%>
                 </c:when>
@@ -40,3 +43,66 @@
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<!-- Modal Register-->
+<div class="modal fade" id="myModalRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabelReg">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <form action="/register" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input id="username" name="username" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" class="form-control" type="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input id="confirm_password" name="confirm_password" class="form-control" type="password">
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block btn-width">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Login -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="username_login">Username</label>
+                        <input id="username_login" name="username" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="password_login">Password</label>
+                        <input id="password_login" name="password" class="form-control" type="password">
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block btn-width" value="Log In">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

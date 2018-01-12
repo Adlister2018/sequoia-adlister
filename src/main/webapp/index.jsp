@@ -9,9 +9,38 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
+    <!-- Modal Login -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input id="username" name="username" class="form-control" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" class="form-control" type="password">
+                        </div>
+                        <input type="submit" class="btn btn-primary btn-block btn-width" value="Log In">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <%--Adlister Main Page--%>
 
     <%--Search--%>
+
     <h1 class="hero-maintext">Welcome to Adlister</h1>
     <p class="hero-maintext hero-subtext">Start searching for ads right now</p>
         <form class="navbar-form hero-maintext hero-subtext hero-form" action="/search">
