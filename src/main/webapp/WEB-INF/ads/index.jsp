@@ -9,21 +9,37 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<div class="container">
     <h1>Here Are all the ads!</h1>
+<%--full page--%>
+        <div class="well">
+            <%--container for the search--%>
+            <div class="container">
+                <div>Welcome to Adlister</h1>
+                    <p >Start searching for ads right now</p>
+                    <form action="/search">
+                        <input type="text" name="term" class="form-control" placeholder="Search...">
+                    </form>
+                </div>
+            </div>
 
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-12">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">${ad.title}</h5>
-                    <p class="card-text">${ad.description}.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <%--Container for the Ads--%>
+            <div class="container">
+                <div class="row">
+                    <%--<div class="col-lg-12 text-center">--%>
+                <c:forEach var="ad" items="${ads}">
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">${ad.title}</h5>
+                        <p class="card-text">${ad.description}.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        </div>
+                    </div>
+                </c:forEach>
                 </div>
             </div>
         </div>
-    </c:forEach>
-</div>
 </body>
 </html>
