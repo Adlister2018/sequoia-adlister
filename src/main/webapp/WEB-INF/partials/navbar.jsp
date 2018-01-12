@@ -5,7 +5,7 @@
         <div class="navbar-header">
 
             <%--<a class="navbar-brand" href="/ads">Adlister</a>--%>
-            <a class="navbar-brand" href="/index.jsp ">Adlister</a>
+            <a class="navbar-brand" href="/">Adlister</a>
         </div>
 
         <ul class="nav navbar-nav navbar-right">
@@ -24,10 +24,17 @@
                         <input type="text" name="term" class="form-control" placeholder="Search...">
                     </form>
 
+
                     <li><a href="/profile?id=${sessionScope.user.id}">My Ads</a></li>
 
                     <li><a href="/ads">All Ads</a></li>
                     <li><a href="/search ">Search</a></li>
+
+                        <li><a href="/profile?id=${sessionScope.user.id}">My Profile/Ads</a></li>
+
+                        <li><a href="/ads">All Ads</a></li>
+                        <%--<li><a href="/search ">Search</a></li>--%>
+
 
 
                     <li><a href="/ads/create">Create</a></li>

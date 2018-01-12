@@ -53,23 +53,6 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
-//    @Override
-//    public List<Ad> userEdit(Long userId)
-
-//    @Override
-//    public Ad findbyId(Long id){
-//        PreparedStatement statement =null;
-//        try{
-//            statement = connection.prepareStatement("SELECT * FROM adlister_db.ads WHERE id=?");
-//        }
-//
-//        catch (){
-//
-//
-//        }
-
-//    }
-
 
     @Override
     public Ad findById(Long id) {
@@ -86,6 +69,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException(e);//new RuntimeException("error finding user by id");
         }
     }
+
     @Override
     public void deleteAd(Long id){
         PreparedStatement delStmt=null;
@@ -96,9 +80,6 @@ public class MySQLAdsDao implements Ads {
 
             return;
 
-//            ResultSet rs = delStmt.executeUpdate();
-//            return createAdsFromResults(rs);
-
 
         }
         catch (SQLException e){
@@ -106,8 +87,6 @@ public class MySQLAdsDao implements Ads {
         }
 
     }
-
-
 
     @Override
     public Long insert(Ad ad) {
@@ -125,6 +104,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+
    public  List<Ad> search(String searchTerm) {
 
         PreparedStatement userstmt = null;
@@ -138,8 +118,6 @@ public class MySQLAdsDao implements Ads {
         }
 
     }
-
-
 
     @Override
     public void update(Ad ad) {
